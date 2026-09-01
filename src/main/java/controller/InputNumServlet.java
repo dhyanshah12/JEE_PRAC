@@ -40,7 +40,7 @@ public class InputNumServlet extends HttpServlet
 			int ans = n1/n2;
 			out.print(ans);
 			
-			System.out.println(ans);
+			
 		}
 		
 	}
