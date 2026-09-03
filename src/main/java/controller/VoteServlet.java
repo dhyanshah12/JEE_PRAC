@@ -45,6 +45,7 @@ public class VoteServlet extends HttpServlet
 		}
 		
 		res.setContentType("text/html");
+		//To Print On the Browser
 		PrintWriter out = res.getWriter();
 		
 		if(isError==true) {
