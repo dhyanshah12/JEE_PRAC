@@ -22,6 +22,7 @@ public class GirRegController extends HttpServlet
 		String contact = req.getParameter("contact");
 		boolean isError = false;
 		
+		//--name--
 		if(Validators.isBlank(name)) {
 			isError = true;
 			req.setAttribute("nameerr","Please Enter Name");
@@ -32,13 +33,15 @@ public class GirRegController extends HttpServlet
 			req.setAttribute("nameValue",name);
 		}
 		
+		//--gender--
 		if(Validators.isBlank(gender)) {
 			isError = true;
-			req.setAttribute("generr","Please Select gender");
+			req.setAttribute("generr","Please Select Gender");
 		}else {
 			req.setAttribute("genValue",gender);
 		}
 		
+		//--city--
 		if(Validators.isBlank(city) || city.equals("-1")) {
 			isError = true;
 			req.setAttribute("cityerr","Please Select City");
@@ -46,17 +49,20 @@ public class GirRegController extends HttpServlet
 			req.setAttribute("cityValue",city);
 		}
 		
+		//--contact--
 		if(Validators.isBlank(contact)) {
 			isError = true;
-			req.setAttribute("conerr","Please Eneter Contact");
+			req.setAttribute("conerr","Please Enter Contact");
 		}else {
 			req.setAttribute("conValue",contact);
 		}
 		
+		//isError
 		if(isError) {
 			RequestDispatcher rd = req.getRequestDispatcher("GirReg.jsp");
 			rd.forward(req, res);
-		}else {
+		}else 
+		{
 			RequestDispatcher rd = req.getRequestDispatcher("GirSuccess.jsp");
 			rd.forward(req, res);
 		}

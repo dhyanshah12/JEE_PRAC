@@ -106,13 +106,13 @@
                         <option value="Surat">Surat</option>
                         <option value="Rajkot">Rajkot</option>
                     </select>
-                   <span class="error"> ${cityError}</span>
+                   <span class="error"> ${cityerr}</span>
                 </div>
 
                 <div class="mb-4">
                     <label class="form-label">Contact</label>
                     <input type="text" value="${conValue}" class="form-control" name="contact" placeholder="Mobile number" />
-                	<span class="error">${conerr }</span>
+                	<span class="error">${conerr}</span>
                 </div>
 
                 <div class="d-grid">
